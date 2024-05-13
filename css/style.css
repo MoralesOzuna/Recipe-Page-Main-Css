@@ -1,0 +1,137 @@
+:root{
+    --Brown: hsl(14, 45%, 36%);
+    --DarkPink: hsl(332, 51%, 32%);
+
+    --white: hsl(0, 0%, 100%);
+    --roseWhite: hsl(330, 100%, 98%);
+    --eggShell: hsl(30, 54%, 90%);
+    --lightGrey: hsl(30, 18%, 87%);
+    --wengeBrown: hsl(30, 10%, 34%);
+    --darkCharcoal: hsl(24, 5%, 18%);
+
+    /* Fonts */
+    --youngSerif: "Young Serif", serif;
+    --outfit: "Outfit", sans-serif;
+
+    --fontsize: 1.6rem
+   
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+h1,h2{
+    font-family: var(--youngSerif);
+    font-weight: 400;
+}
+
+
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+    color: var(--Brown);
+}
+h3{
+    font-size: 3rem;
+    font-family: var(--outfit);
+    font-weight: 600;
+}
+p, [class$="__item"], [class$="__step"]{
+    font-family: var(--outfit);
+    font-size: 2rem;
+    color: var(--darkCharcoal);
+    line-height: 3.5rem;
+}
+img{
+    max-width: 100%;
+}
+li::marker{
+    color: var(--Brown);
+}
+/* Se aplica a todas las clases con el nombre de .nombreclase__item */
+[class$="__item"]{
+    font-size: 1.8rem;
+    color: var(--darkCharcoal);
+}
+[class$="__item"] span, [class$="__step"] span {
+    font-weight: 700;
+    color: var(--wengeBrown);
+    margin-left: 3rem;
+}
+[class$="__step"]{
+   padding-left: 3rem;    
+}
+[class$="__step"] span{
+    margin-left: 0;
+}
+.header__image{
+    background-image: url(../assets/images/image-omelette.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+    margin-bottom: 6rem;
+}
+@media (min-width: 768px) {
+    .header{
+        margin-top: 5rem;
+    }
+    .header__image{
+        border-radius: 2rem;
+        margin: 0 auto;
+        max-width: 90%;
+        height: 60rem;
+    }
+}
+.information, .nutrition, main{
+    margin: 0 auto;
+    max-width: 90%;
+  
+}
+.information__title{
+    line-height: 5rem;
+}
+.time{
+    max-width: 70%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .time{
+        max-width: 95%;
+        margin-top: 8rem;
+    }
+}
+.time__title{
+    color: var(--DarkPink);   
+}
+.nutrition, .instructions, .ingredients{
+    margin-top: 7rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--lightGrey);
+}
+.table{
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    border-bottom: 1px solid var(--lightGrey);
+ 
+}
+.table:last-of-type{
+    border-bottom: none
+}
+.table__information{
+    color:var(--DarkPink);
+    font-weight: 700;
+}
